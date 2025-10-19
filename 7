@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Problem7_AverageGrade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter number of students: ");
+        int size = sc.nextInt();
+        double[] grades = new double[size];
+        
+        System.out.println("Enter " + size + " grades:");
+        for (int i = 0; i < size; i++) {
+            grades[i] = sc.nextDouble();
+        }
+        
+        double sum = 0;
+        for (int i = 0; i < grades.length; i++) {
+            sum += grades[i];
+        }
+        double average = sum / grades.length;
+        
+        System.out.println("Average grade: " + average);
+        
+        sc.close();
+    }
+}
